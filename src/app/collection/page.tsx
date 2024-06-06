@@ -7,11 +7,23 @@ import { api } from '../../../convex/_generated/api'
 
 const CollectionPage = () => {
     const getSketchesDB = useQuery(api.sketches.getSketches)
+
+
   return (
     <div>
+        <h2>Recent Sketches from users</h2>
+        <div className="grid gap-4 grid-cols-4">
+
         {getSketchesDB?.map((item, index) => (
-            <p key={item._id}>{item.prompt}</p>
+            <img 
+            key={item._id} 
+            src={item.result} 
+            width='300'
+            height="300"
+            alt={item.prompt} 
+            />
         ))}
+        </div>
     </div>
   )
 }
