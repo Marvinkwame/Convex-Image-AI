@@ -39,6 +39,9 @@ export default function Home() {
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <main className="flex min-h-screen flex-col items-center justify-center p-24 ">
+       <h2 className="text-white text-3xl mb-6">
+        If you are not getting any images back, the free replicate api limits are finished.
+      </h2>
       <div className="container mx-auto flex flex-col md:flex-row gap-8">
         <form
           className="flex flex-col gap-4 w-[40%]"
